@@ -13,7 +13,7 @@
 # Purpose:  Check for existence (or not) of a file.
 #
 # Notes:
-#
+#This version from https://github.com/whlspacedude/check_file_exists_glob
 
 
 # ---------------------------------------------------------------------------
