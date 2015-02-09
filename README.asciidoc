@@ -21,9 +21,9 @@ mv check_file_exists_glob /usr/lib64/nagios/plugins/
 *EXAMPLE OUTPUT*
 
 ----
-OK: File 'asdfg*' is absent, good.
+OK: File '/path/asdfg*' is absent
 
-OK: File 'asdf*' is present, good. | "asdf*"=3
+OK: File '/path/asdf*' is present | "asdf*"=3
 
 WARNING:  File 'asdfg*' found in '/home/clarkm93/bob/'. | "asdfg*"=2
 
