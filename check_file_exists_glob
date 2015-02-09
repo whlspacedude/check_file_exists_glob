@@ -59,14 +59,14 @@ main()
     do_check
 
     txt="OK:"
-    [[ $INVERTFILE -eq 0 ]] && msg="File '$FILE' is present, good."
-    [[ $INVERTFILE -eq 1 ]] && msg="File '$FILE' is absent, good."
+    [[ $INVERTFILE -eq 0 ]] && msg="File '$DIR$FILE' is present"
+    [[ $INVERTFILE -eq 1 ]] && msg="File '$DIR$FILE' is absent"
     if [[ $ALERTFILE -eq 1 ]]; then
         retval=$CRIT
         txt="OK: "
         [[ $NFILES -ge $WARNLVL ]] && txt="WARNING: "
         [[ $NFILES -ge $CRITLVL ]] && txt="CRITICAL: "
-        msg="File does not exist, '$FILE'."
+        msg="File does not exist, '$DIR$FILE'."
         [[ $INVERTFILE -eq 1 ]] && msg="File '$FILE' found in '$DIR'."
         [[ $ALERTDIR -eq 1 ]] && msg+=" Directory does not exist, '$DIR'."
     elif [[ $ALERTDIR -eq 1 ]]; then
